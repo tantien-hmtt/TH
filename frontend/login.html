@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập</title>
+</head>
+<body>
+    <h1>Trang Đăng Nhập</h1>
+    <!-- Thêm nội dung của trang đăng nhập -->
+
+
+    <a href="../frontend/index.html">Trở về Trang Chủ</a>
+    <button onclick="redirectToRegisterPage()">Đăng Ký</button>
+    <script>
+        function redirectToRegisterPage() {
+            window.location.href = './register.html'; // Đường dẫn tương đối
+        }
+    </script>
+    
+
+    <form id="loginForm">
+        <label for="emaillogin">Email:</label>
+        <input type="email" id="emaillogin" name="emaillogin" required>
+
+        <label for="passwordlogin">Mật khẩu:</label>
+        <input type="password" id="passwordlogin" name="passwordlogin" required>
+
+        <button type="button" id="loginButton" onclick="submitForm()">Đăng Nhập</button>
+    </form>
+    
+    <div id="userInfoContainer" style="display: none;">
+        <h2>Thông tin người dùng</h2>
+        <p><strong>Email:</strong> <span id="userEmail"></span></p>
+        <p><strong>Tên đầy đủ:</strong> <span id="userFullname"></span></p>
+        <!-- Thêm các thông tin khác nếu cần -->
+    </div>
+    <!-- Thêm mã script tại cuối body -->
+    <script src="login.js"></script>
+    
+</body>
+</html>
